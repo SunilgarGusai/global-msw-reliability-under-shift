@@ -1,0 +1,51 @@
+name: Bootstrap PAPER19 frozen repository
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bootstrap-paper19.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout bootstrap state
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct verified repository package
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .bootstrap/package.b64.part* > /tmp/paper19.b64
+          base64 --decode /tmp/paper19.b64 > /tmp/paper19.zip
+          echo "440accc8b5912b7983d18f7c318da7423d394ad3fbd8dd0bd15186314512fa28  /tmp/paper19.zip" | sha256sum -c -
+          unzip -t /tmp/paper19.zip
+          rm -rf /tmp/paper19-extract
+          mkdir -p /tmp/paper19-extract
+          unzip -q /tmp/paper19.zip -d /tmp/paper19-extract
+          test -d /tmp/paper19-extract/global-msw-reliability-under-shift
+          rsync -a --delete --exclude='.git/' /tmp/paper19-extract/global-msw-reliability-under-shift/ ./
+          rm -rf .bootstrap
+          rm -f .github/workflows/bootstrap-paper19.yml
+
+      - name: Commit frozen public artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish frozen PAPER19 reproducibility artifact [skip ci]"
+          git push origin HEAD:main
+          if git rev-parse -q --verify refs/tags/v1.0.0-submission >/dev/null; then
+            git tag -d v1.0.0-submission
+          fi
+          git tag -a v1.0.0-submission -m "Frozen submission reproducibility state"
+          git push origin refs/tags/v1.0.0-submission
