@@ -1,56 +1,66 @@
-name: Bootstrap PAPER19 frozen repository
+name: Repository verification
 
 on:
-  push:
-    paths:
-      - '.github/workflows/bootstrap-paper19.yml'
   workflow_dispatch:
-
-permissions:
-  contents: write
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
-  publish:
-    if: github.actor != 'github-actions[bot]'
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout bootstrap state
+      - name: Checkout repository
         uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
-          fetch-depth: 0
+          python-version: '3.13'
 
-      - name: Reconstruct and verify frozen package
-        shell: bash
+      - name: Install dependencies
         run: |
-          set -euo pipefail
-          cat .bootstrap/package.b64.seg* > /tmp/paper19.b64
-          test "$(wc -c < /tmp/paper19.b64)" -eq 2822123
-          base64 --decode /tmp/paper19.b64 > /tmp/paper19.zip
-          echo "440accc8b5912b7983d18f7c318da7423d394ad3fbd8dd0bd15186314512fa28  /tmp/paper19.zip" | sha256sum -c -
-          unzip -t /tmp/paper19.zip
-          rm -rf /tmp/paper19-extract
-          mkdir -p /tmp/paper19-extract
-          unzip -q /tmp/paper19.zip -d /tmp/paper19-extract
-          SRC=/tmp/paper19-extract/global-msw-reliability-under-shift
-          test -d "$SRC"
-          test "$(find "$SRC" -type f | wc -l)" -eq 118
-          cd "$SRC"
-          sha256sum -c PUBLIC_SHA256SUMS.txt
-          cd "$GITHUB_WORKSPACE"
-          rsync -a --delete --exclude='.git/' --exclude='.github/workflows/repository-validation.yml' --exclude='.github/workflows/bootstrap-paper19.yml' "$SRC/" ./
-          rm -rf .bootstrap
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
 
-      - name: Publish repository and frozen release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
+      - name: Check Python syntax
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Publish frozen PAPER19 reproducibility artifact"
-          git push origin HEAD:main
-          git tag -f -a v1.0.0-submission -m "Frozen submission reproducibility state"
-          git push --force origin refs/tags/v1.0.0-submission
-          gh release create v1.0.0-submission /tmp/paper19.zip --title "v1.0.0-submission — Frozen reproducibility archive" --notes-file RELEASE_NOTES_v1.0.0-submission.md
+          python -m compileall -q pipeline/scripts scripts tests
+
+      - name: Validate frozen public artifact
+        run: python scripts/validate_public_artifact.py
+
+      - name: Run numerical invariant tests
+        run: pytest -q
+
+      - name: Reproduce V2 decision audit
+        run: |
+          rm -rf results/v2_upgrade_reproduced figures/reproduced
+          python pipeline/scripts/11_oof_decision_audit.py --predictions results/verified_baseline/results/primary_logo_predictions.csv --out results/v2_upgrade_reproduced --figures figures/reproduced
+          python - <<'PY2'
+          import pandas as pd
+          from pathlib import Path
+          root=Path('.')
+          names=['v2_target_severity_audit.csv','v2_target_error_correlations.csv','v2_income_by_target_quartile.csv','v2_prioritization_rank_metrics.csv','v2_service_deficit_threshold_audit.csv','v2_service_deficit_missed_cases.csv','v2_decision_audit_country_rows.csv']
+          for n in names:
+              a=pd.read_csv(root/'results/v2_upgrade'/n)
+              b=pd.read_csv(root/'results/v2_upgrade_reproduced'/n)
+              pd.testing.assert_frame_equal(a,b,check_exact=True)
+          print('V2 decision audit exact replay: PASS')
+          PY2
+
+      - name: Regenerate reviewer-facing figures
+        run: python scripts/regenerate_public_figures.py
+
+      - name: Print scientific summary
+        run: python scripts/summarize_key_results.py
+
+      - name: Summary
+        run: |
+          echo '## Global MSW reliability repository verification' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Environment installation: PASS' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Python syntax: PASS' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Frozen numerical invariants: PASS' >> "$GITHUB_STEP_SUMMARY"
+          echo '- SHA-256 integrity: PASS' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Exact V2 decision-audit replay: PASS' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Public figure regeneration: PASS' >> "$GITHUB_STEP_SUMMARY"
