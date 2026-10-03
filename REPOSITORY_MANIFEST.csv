@@ -12,6 +12,7 @@ docs/REPRODUCIBILITY.md,Exact/fresh rerun distinction and commands,documentation
 docs/CLAIM_BOUNDARIES.md,Supported and unsupported scientific claims,documentation,frozen
 docs/RESULTS_FREEZE.md,Scientific freeze and immutability rule,documentation,frozen
 docs/RELEASE_POLICY.md,Versioned public-release and scientific-freeze policy,documentation,current
+docs/assets/msw-reliability-workflow-animated.svg,Animated README workflow visual,visual,current
 pipeline/scripts/11_oof_decision_audit.py,Deterministic V2 outcome-severity/prioritization audit,code,frozen
 results/verified_baseline/results/primary_logo_predictions.csv,Five-model LORO point predictions,result,frozen
 results/verified_baseline/results/primary_conformal_predictions.csv,Conformal/OOD LORO predictions,result,frozen
