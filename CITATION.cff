@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Global MSW Reliability Under Geographic Shift"
+message: "Please cite the associated article and the frozen repository release when using these materials."
+type: software
+authors:
+  - family-names: Gusai
+    given-names: Sunilgar L.
+    orcid: "https://orcid.org/0009-0004-0739-4812"
+  - family-names: Jadeja
+    given-names: Manoharsinh R.
+    orcid: "https://orcid.org/0000-0003-1833-4730"
+version: 1.0.0
+date-released: 2026-10-03
+repository-code: "https://github.com/SunilgarGusai/global-msw-reliability-under-shift"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Reliability Gaps Under Geographic Shift in Global Municipal Waste Service Prediction"
+  authors:
+    - family-names: Gusai
+      given-names: Sunilgar L.
+    - family-names: Jadeja
+      given-names: Manoharsinh R.
+  year: 2026
