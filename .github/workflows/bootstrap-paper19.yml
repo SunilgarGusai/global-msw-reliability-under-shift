@@ -23,21 +23,19 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .bootstrap/package.b64.part* > /tmp/paper19.b64
+          cat .bootstrap/package.b64.seg* > /tmp/paper19.b64
+          test "$(wc -c < /tmp/paper19.b64)" -eq 2822123
           base64 --decode /tmp/paper19.b64 > /tmp/paper19.zip
-          echo "Reconstructed archive SHA-256:"
-          sha256sum /tmp/paper19.zip
+          echo "440accc8b5912b7983d18f7c318da7423d394ad3fbd8dd0bd15186314512fa28  /tmp/paper19.zip" | sha256sum -c -
           unzip -t /tmp/paper19.zip
           rm -rf /tmp/paper19-extract
           mkdir -p /tmp/paper19-extract
           unzip -q /tmp/paper19.zip -d /tmp/paper19-extract
           SRC=/tmp/paper19-extract/global-msw-reliability-under-shift
           test -d "$SRC"
-          echo "Frozen package file count:"
-          find "$SRC" -type f | wc -l
+          test "$(find "$SRC" -type f | wc -l)" -eq 118
           cd "$SRC"
           sha256sum -c PUBLIC_SHA256SUMS.txt
-          test "$(find . -type f | wc -l)" -eq 118
           cd "$GITHUB_WORKSPACE"
           rsync -a --delete --exclude='.git/' "$SRC/" ./
           rm -rf .bootstrap
