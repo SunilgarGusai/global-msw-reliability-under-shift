@@ -1,0 +1,39 @@
+{
+  "study_title": "Reliability Gaps Under Geographic Shift in Global Municipal Waste Service Prediction",
+  "primary_seed": 19019,
+  "bootstrap_replicates": 20000,
+  "nominal_miscoverage_alpha": 0.1,
+  "calibration_fraction": 0.25,
+  "outer_validation": "leave-one-World-Bank-region-out",
+  "n_primary_countries": 154,
+  "regions": [
+    "E. Asia & Pacific",
+    "Eur. & Cent. Asia",
+    "L. Amer. & the Caribbean",
+    "Mid. East & N. Africa",
+    "N. Amer.",
+    "S. Asia",
+    "Sub-Saharan Africa"
+  ],
+  "primary_endpoint_priority": [
+    "PT_MSW",
+    "PT_POP",
+    "PT_HH"
+  ],
+  "predictors": {
+    "gdp_ppp_pc": "NY.GDP.PCAP.PP.KD",
+    "urban_pct": "SP.URB.TOTL.IN.ZS",
+    "population": "SP.POP.TOTL",
+    "pop_density": "EN.POP.DNST"
+  },
+  "point_models": [
+    "linear",
+    "ridge",
+    "random_forest",
+    "hist_gbr",
+    "dummy_mean"
+  ],
+  "primary_selected_model": "linear",
+  "v2_decision_audit_refits_model": false,
+  "public_raw_data_redistributed": false
+}

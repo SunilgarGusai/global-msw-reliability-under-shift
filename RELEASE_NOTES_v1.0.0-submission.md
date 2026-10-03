@@ -1,6 +1,6 @@
 # v1.0.0-submission — Frozen reproducibility archive
 
-This release freezes the computational evidence supporting **Reliability Gaps Under Geographic Shift in Global Municipal Waste Service Prediction**.
+This release freezes the reviewer-facing computational evidence supporting **Reliability Gaps Under Geographic Shift in Global Municipal Waste Service Prediction**.
 
 The archive contains the verified Phase-B2 model, subgroup, conformal/OOD, robustness and secondary-endpoint outputs plus the V2 outcome-severity and service-deficit prioritization audit computed from frozen LORO predictions.
 

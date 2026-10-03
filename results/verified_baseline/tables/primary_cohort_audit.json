@@ -1,0 +1,42 @@
+{
+  "n": 154,
+  "year_min": 2001,
+  "year_max": 2025,
+  "year_median": 2020.0,
+  "unit_counts": {
+    "PT_MSW": 87,
+    "PT_POP": 51,
+    "PT_HH": 16
+  },
+  "region_counts": {
+    "L. Amer. & the Caribbean": 34,
+    "Sub-Saharan Africa": 33,
+    "Eur. & Cent. Asia": 30,
+    "E. Asia & Pacific": 30,
+    "Mid. East & N. Africa": 17,
+    "S. Asia": 8,
+    "N. Amer.": 2
+  },
+  "income_counts": {
+    "Upper middle income": 51,
+    "High income": 48,
+    "Lower middle income": 42,
+    "Low income": 13
+  },
+  "coverage_summary": {
+    "count": 154.0,
+    "mean": 71.58426937338035,
+    "std": 28.689075034618185,
+    "min": 3.62,
+    "25%": 53.425,
+    "50%": 80.315,
+    "75%": 97.8,
+    "max": 100.0
+  },
+  "feature_nonmissing": {
+    "gdp_ppp_pc": 144,
+    "urban_pct": 154,
+    "population": 154,
+    "pop_density": 152
+  }
+}

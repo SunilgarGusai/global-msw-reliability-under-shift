@@ -1,0 +1,10 @@
+# PAPER19 Reproducibility Verification
+
+- Files hashed: 90
+- Best primary held-region model: linear
+- MAE: 13.981873
+- RMSE: 18.913204
+- R2: 0.562552
+
+All generated numerical outputs should be treated as authoritative only when this verification phase completes without error.
+PHASE 08 COMPLETE

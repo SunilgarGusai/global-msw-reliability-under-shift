@@ -1,0 +1,32 @@
+path,role,category,status
+README.md,Public landing page and reviewer navigation,documentation,current
+QUICKSTART.md,Minimal verification and replay commands,documentation,current
+CITATION.cff,Machine-readable citation metadata,metadata,current
+LICENSE,MIT license for original code/documentation,license,current
+THIRD_PARTY_LICENSES.md,Third-party data/software licensing boundary,license,current
+config/frozen_config.json,Public frozen design parameters,configuration,frozen
+docs/METHOD_PROTOCOL.md,Computational design and evaluation protocol,documentation,frozen
+docs/FROZEN_RESULTS.md,Headline numerical evidence and intervals,documentation,frozen
+docs/DATA_PROVENANCE.md,Source lineage and 138-file Phase-B2 history,documentation,frozen
+docs/REPRODUCIBILITY.md,Exact/fresh rerun distinction and commands,documentation,current
+docs/CLAIM_BOUNDARIES.md,Supported and unsupported scientific claims,documentation,frozen
+docs/RESULTS_FREEZE.md,Scientific freeze and immutability rule,documentation,frozen
+docs/RELEASE_POLICY.md,Versioned public-release and scientific-freeze policy,documentation,current
+pipeline/scripts/11_oof_decision_audit.py,Deterministic V2 outcome-severity/prioritization audit,code,frozen
+results/verified_baseline/results/primary_logo_predictions.csv,Five-model LORO point predictions,result,frozen
+results/verified_baseline/results/primary_conformal_predictions.csv,Conformal/OOD LORO predictions,result,frozen
+results/verified_baseline/tables/primary_model_summary.csv,Primary model comparison,result,frozen
+results/verified_baseline/tables/primary_subgroup_metrics.csv,Region/income reliability metrics,result,frozen
+results/verified_baseline/tables/primary_robustness_summary.csv,Recency and measurement-basis robustness,result,frozen
+results/verified_baseline/tables/conformal_selective_summary.csv,Selective-prediction risk/coverage results,result,frozen
+results/verified_baseline/tables/secondary_model_summary.csv,Treatment/disposal secondary endpoint,result,frozen
+results/v2_upgrade/v2_target_severity_audit.csv,Outcome-severity audit,result,frozen
+results/v2_upgrade/v2_prioritization_rank_metrics.csv,Service-deficit rank/recall audit,result,frozen
+results/v2_upgrade/v2_service_deficit_threshold_audit.csv,Threshold-level deficit misses,result,frozen
+provenance/PHASE_B2_VERIFICATION_REPORT.md,138-file final local verification report,provenance,frozen
+provenance/PHASE_B2_SCIENTIFIC_LOCK.md,Primary scientific claim lock,provenance,frozen
+provenance/file_manifest_phaseB2.csv,Historical local Phase-B2 file manifest,provenance,frozen
+provenance/checksums_phaseB2.sha256,Historical local Phase-B2 SHA-256 record,provenance,frozen
+scripts/validate_public_artifact.py,Repository structure/numerical/integrity validator,code,current
+tests/test_frozen_invariants.py,Automated frozen numerical tests,test,current
+.github/workflows/repository-validation.yml,GitHub Actions continuous verification,automation,current

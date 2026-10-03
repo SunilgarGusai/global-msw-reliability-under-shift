@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">Global MSW Reliability Under Geographic Shift</title>
+<desc id="desc">Repository banner showing a four-stage reliability audit from global waste data through regional holdout and uncertainty auditing to service-deficit prioritization.</desc>
+<rect width="1200" height="300" rx="24" fill="#0b132b"/>
+<text x="60" y="78" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Global MSW Reliability Under Geographic Shift</text>
+<text x="60" y="118" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#dbeafe">Frozen, auditable evidence for environmental-AI reliability and decision support</text>
+<g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="middle">
+  <rect x="65" y="168" width="220" height="72" rx="12" fill="#1d4ed8"/><text x="175" y="199" fill="#fff">WAW3 + WDI</text><text x="175" y="224" fill="#dbeafe" font-size="15">154-country cohort</text>
+  <rect x="345" y="168" width="220" height="72" rx="12" fill="#0f766e"/><text x="455" y="199" fill="#fff">Regional holdout</text><text x="455" y="224" fill="#ccfbf1" font-size="15">7-region LORO</text>
+  <rect x="625" y="168" width="220" height="72" rx="12" fill="#7c3aed"/><text x="735" y="199" fill="#fff">Reliability audit</text><text x="735" y="224" fill="#ede9fe" font-size="15">subgroups + conformal + OOD</text>
+  <rect x="905" y="168" width="230" height="72" rx="12" fill="#b45309"/><text x="1020" y="199" fill="#fff">Decision audit</text><text x="1020" y="224" fill="#ffedd5" font-size="15">service-deficit prioritization</text>
+</g>
+<g stroke="#e5e7eb" stroke-width="4" fill="none"><path d="M285 204 H345"/><path d="M565 204 H625"/><path d="M845 204 H905"/></g>
+<g fill="#e5e7eb"><path d="M337 196 l12 8 -12 8z"/><path d="M617 196 l12 8 -12 8z"/><path d="M897 196 l12 8 -12 8z"/></g>
+</svg>

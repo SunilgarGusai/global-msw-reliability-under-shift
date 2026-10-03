@@ -1,0 +1,9 @@
+[GET] https://data360files.worldbank.org/data360-data/data/WB_WAW/WM_COL_COV.csv
+[SAVED] E:\Research\PAPERS\PAPER019\PAPER19_Local_Execution_V1\data\raw\WM_COL_COV.csv (344,838 bytes)
+[GET] https://data360files.worldbank.org/data360-data/data/WB_WAW/WM_MSW_TREAT.csv
+[SAVED] E:\Research\PAPERS\PAPER019\PAPER19_Local_Execution_V1\data\raw\WM_MSW_TREAT.csv (575,520 bytes)
+[API] WDI NY.GDP.PCAP.PP.KD
+[API] WDI SP.URB.TOTL.IN.ZS
+[API] WDI SP.POP.TOTL
+[API] WDI EN.POP.DNST
+PHASE 01 COMPLETE

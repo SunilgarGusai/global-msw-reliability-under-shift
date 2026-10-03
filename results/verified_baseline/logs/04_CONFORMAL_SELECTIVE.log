@@ -1,0 +1,32 @@
+  n  retention       mae      bias  coverage  mean_width interval_method                  policy
+154   1.000000 13.710781 -0.808900  0.850649   51.081397          global                     all
+ 69   0.448052 12.253248 -1.869934  0.898551   54.516799          global       retain_global_q50
+ 88   0.571429 13.524158  0.334486  0.852273   52.112485          global       retain_global_q60
+100   0.649351 14.000929  0.331340  0.830000   51.210106          global       retain_global_q70
+105   0.681818 13.797367 -0.053664  0.838095   51.013366          global       retain_global_q80
+117   0.759740 13.584380  0.353335  0.854701   51.148859          global       retain_global_q90
+ 76   0.493506 13.341851  0.984098  0.855263   52.094520          global retain_equal_income_q50
+ 92   0.597403 12.968198  0.412631  0.869565   51.686414          global retain_equal_income_q60
+109   0.707792 13.268203 -0.108872  0.862385   51.443472          global retain_equal_income_q70
+125   0.811688 13.209216 -0.064579  0.864000   51.056230          global retain_equal_income_q80
+154   1.000000 13.710781 -0.808900  0.857143   56.714917          scaled                     all
+ 69   0.448052 12.253248 -1.869934  0.826087   48.950470          scaled       retain_global_q50
+ 88   0.571429 13.524158  0.334486  0.795455   49.990319          scaled       retain_global_q60
+100   0.649351 14.000929  0.331340  0.790000   50.721582          scaled       retain_global_q70
+105   0.681818 13.797367 -0.053664  0.800000   51.066591          scaled       retain_global_q80
+117   0.759740 13.584380  0.353335  0.820513   52.423444          scaled       retain_global_q90
+ 76   0.493506 13.341851  0.984098  0.802632   50.639265          scaled retain_equal_income_q50
+ 92   0.597403 12.968198  0.412631  0.826087   51.614915          scaled retain_equal_income_q60
+109   0.707792 13.268203 -0.108872  0.844037   52.955740          scaled retain_equal_income_q70
+125   0.811688 13.209216 -0.064579  0.848000   54.308629          scaled retain_equal_income_q80
+154   1.000000 13.710781 -0.808900  0.818182   48.803333 income_mondrian                     all
+ 69   0.448052 12.253248 -1.869934  0.898551   54.959247 income_mondrian       retain_global_q50
+ 88   0.571429 13.524158  0.334486  0.909091   55.512429 income_mondrian       retain_global_q60
+100   0.649351 14.000929  0.331340  0.880000   54.492525 income_mondrian       retain_global_q70
+105   0.681818 13.797367 -0.053664  0.876190   53.573982 income_mondrian       retain_global_q80
+117   0.759740 13.584380  0.353335  0.880342   52.501122 income_mondrian       retain_global_q90
+ 76   0.493506 13.341851  0.984098  0.855263   49.341147 income_mondrian retain_equal_income_q50
+ 92   0.597403 12.968198  0.412631  0.858696   49.301143 income_mondrian retain_equal_income_q60
+109   0.707792 13.268203 -0.108872  0.853211   49.696535 income_mondrian retain_equal_income_q70
+125   0.811688 13.209216 -0.064579  0.856000   49.028061 income_mondrian retain_equal_income_q80
+PHASE 04 COMPLETE

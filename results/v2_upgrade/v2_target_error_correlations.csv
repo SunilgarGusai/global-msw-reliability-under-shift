@@ -1,0 +1,3 @@
+analysis,spearman_rho,p_value
+observed_coverage_vs_signed_error,-0.6258711193930897,3.996706598584837e-18
+observed_coverage_vs_absolute_error,-0.4018653943420698,2.393502621702487e-07

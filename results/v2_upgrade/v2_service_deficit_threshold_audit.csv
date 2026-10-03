@@ -1,0 +1,4 @@
+coverage_threshold,n_actual_below_or_equal,n_predicted_below_or_equal,true_positive,false_negative,false_positive,sensitivity,precision
+25,18,0,0,18,0,0.0,
+50,36,23,17,19,6,0.4722222222222222,0.7391304347826086
+75,65,87,61,4,26,0.9384615384615385,0.7011494252873564

@@ -1,0 +1,14 @@
+claim_or_artifact,authoritative_file,notes
+Primary LORO model metrics,results/verified_baseline/tables/primary_model_summary.csv,Phase B2 frozen
+Income/region reliability,results/verified_baseline/tables/primary_subgroup_metrics.csv,Phase B2 frozen
+Conformal subgroup coverage,results/verified_baseline/tables/conformal_income_audit.csv,Phase B2 frozen
+Selective-prediction summary,results/verified_baseline/tables/conformal_selective_summary.csv,Phase B2 frozen
+Temporal/measurement sensitivity,results/verified_baseline/tables/primary_robustness_summary.csv,Phase B2 frozen
+Treatment/disposal secondary endpoint,results/verified_baseline/tables/secondary_model_summary.csv,Phase B2 frozen
+Outcome-severity quartiles,results/v2_upgrade/v2_target_severity_audit.csv,V2 reviewer-stage diagnostic
+Coverage-error rank correlations,results/v2_upgrade/v2_target_error_correlations.csv,V2 reviewer-stage diagnostic
+Income-by-target quartile,results/v2_upgrade/v2_income_by_target_quartile.csv,V2 reviewer-stage diagnostic
+Deficit-ranking recall,results/v2_upgrade/v2_prioritization_rank_metrics.csv,V2 reviewer-stage diagnostic
+Service-deficit threshold audit,results/v2_upgrade/v2_service_deficit_threshold_audit.csv,V2 reviewer-stage diagnostic
+Figure 7,figures/Fig7_Target_Severity_Audit.pdf,Generated from frozen OOF predictions
+Figure 8,figures/Fig8_Deficit_Prioritization.pdf,Generated from frozen OOF predictions

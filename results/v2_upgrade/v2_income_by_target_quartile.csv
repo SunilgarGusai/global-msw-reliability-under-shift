@@ -1,0 +1,6 @@
+income_group,Q1_lowest_coverage,Q2,Q3,Q4_highest_coverage,All
+High income,0,5,12,31,48
+Low income,11,2,0,0,13
+Lower middle income,22,14,5,1,42
+Upper middle income,6,17,21,7,51
+All,39,38,38,39,154

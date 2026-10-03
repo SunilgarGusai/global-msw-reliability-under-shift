@@ -1,0 +1,6 @@
+metric,value,p_value
+deficit_rank_spearman,0.8074889754750134,1.1430125248405528e-36
+top_10pct_deficit_recall,0.375,
+top_20pct_deficit_recall,0.6451612903225806,
+top_25pct_deficit_recall,0.6666666666666666,
+top_33pct_deficit_recall,0.7647058823529411,

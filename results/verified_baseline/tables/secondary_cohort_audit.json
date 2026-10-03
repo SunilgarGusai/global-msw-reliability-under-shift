@@ -1,0 +1,10 @@
+{
+  "n": 155,
+  "year_min": 2004,
+  "year_max": 2024,
+  "since_2020_n": 110,
+  "ambiguity_delta_mean": 26.08957149837835,
+  "ambiguity_delta_median": 2.0,
+  "unspecified_landfill_n": 68,
+  "other_n": 35
+}

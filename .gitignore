@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
+results/v2_upgrade_reproduced/
+figures/reproduced/
+figures/reproduced_public/

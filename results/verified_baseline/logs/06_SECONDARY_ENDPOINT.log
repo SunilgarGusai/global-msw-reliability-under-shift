@@ -1,0 +1,12 @@
+  n       mae      rmse        r2      bias definition         model
+155 22.896697 29.665499  0.356189 -2.602989 permissive        linear
+155 22.906191 29.668307  0.356067 -2.607061 permissive         ridge
+155 24.633232 31.808837  0.259797 -2.276645 permissive random_forest
+155 26.106407 33.097116  0.198625 -3.828678 permissive      hist_gbr
+155 35.833101 40.248899 -0.185123 -2.390111 permissive    dummy_mean
+155 31.392406 37.229716  0.158505 -3.168099     strict        linear
+155 32.023627 37.887031  0.128529 -3.742905     strict         ridge
+155 34.376995 41.809555 -0.061263 -5.647550     strict random_forest
+155 35.413292 43.131769 -0.129448 -5.238928     strict      hist_gbr
+155 39.762088 44.322329 -0.192661 -2.897577     strict    dummy_mean
+PHASE 06 COMPLETE

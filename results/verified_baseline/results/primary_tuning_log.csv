@@ -1,0 +1,36 @@
+fold,held_region,model,best_params
+1,E. Asia & Pacific,dummy_mean,{}
+1,E. Asia & Pacific,linear,{}
+1,E. Asia & Pacific,ridge,{'model__alpha': 1.0}
+1,E. Asia & Pacific,random_forest,"{'model__max_depth': None, 'model__max_features': 0.7, 'model__min_samples_leaf': 2}"
+1,E. Asia & Pacific,hist_gbr,"{'model__l2_regularization': 10.0, 'model__learning_rate': 0.05, 'model__max_leaf_nodes': 7}"
+2,Eur. & Cent. Asia,dummy_mean,{}
+2,Eur. & Cent. Asia,linear,{}
+2,Eur. & Cent. Asia,ridge,{'model__alpha': 0.1}
+2,Eur. & Cent. Asia,random_forest,"{'model__max_depth': 5, 'model__max_features': 0.7, 'model__min_samples_leaf': 2}"
+2,Eur. & Cent. Asia,hist_gbr,"{'model__l2_regularization': 10.0, 'model__learning_rate': 0.03, 'model__max_leaf_nodes': 7}"
+3,L. Amer. & the Caribbean,dummy_mean,{}
+3,L. Amer. & the Caribbean,linear,{}
+3,L. Amer. & the Caribbean,ridge,{'model__alpha': 1.0}
+3,L. Amer. & the Caribbean,random_forest,"{'model__max_depth': None, 'model__max_features': 1.0, 'model__min_samples_leaf': 2}"
+3,L. Amer. & the Caribbean,hist_gbr,"{'model__l2_regularization': 0.0, 'model__learning_rate': 0.03, 'model__max_leaf_nodes': 7}"
+4,Mid. East & N. Africa,dummy_mean,{}
+4,Mid. East & N. Africa,linear,{}
+4,Mid. East & N. Africa,ridge,{'model__alpha': 1.0}
+4,Mid. East & N. Africa,random_forest,"{'model__max_depth': None, 'model__max_features': 0.7, 'model__min_samples_leaf': 2}"
+4,Mid. East & N. Africa,hist_gbr,"{'model__l2_regularization': 0.0, 'model__learning_rate': 0.05, 'model__max_leaf_nodes': 7}"
+5,N. Amer.,dummy_mean,{}
+5,N. Amer.,linear,{}
+5,N. Amer.,ridge,{'model__alpha': 0.1}
+5,N. Amer.,random_forest,"{'model__max_depth': None, 'model__max_features': 0.7, 'model__min_samples_leaf': 2}"
+5,N. Amer.,hist_gbr,"{'model__l2_regularization': 10.0, 'model__learning_rate': 0.03, 'model__max_leaf_nodes': 7}"
+6,S. Asia,dummy_mean,{}
+6,S. Asia,linear,{}
+6,S. Asia,ridge,{'model__alpha': 1.0}
+6,S. Asia,random_forest,"{'model__max_depth': 5, 'model__max_features': 0.7, 'model__min_samples_leaf': 2}"
+6,S. Asia,hist_gbr,"{'model__l2_regularization': 10.0, 'model__learning_rate': 0.1, 'model__max_leaf_nodes': 7}"
+7,Sub-Saharan Africa,dummy_mean,{}
+7,Sub-Saharan Africa,linear,{}
+7,Sub-Saharan Africa,ridge,{'model__alpha': 10.0}
+7,Sub-Saharan Africa,random_forest,"{'model__max_depth': None, 'model__max_features': 1.0, 'model__min_samples_leaf': 2}"
+7,Sub-Saharan Africa,hist_gbr,"{'model__l2_regularization': 0.0, 'model__learning_rate': 0.05, 'model__max_leaf_nodes': 7}"
