@@ -52,10 +52,12 @@ Detailed numerical results are intentionally kept out of this landing page. They
 ## Study workflow
 
 <p align="center">
-  <img src="figures/Fig1_Workflow_V2.png" alt="Study workflow from public evidence through harmonization, geographic holdout, reliability auditing and decision audit" width="92%" />
+  <img src="docs/assets/msw-reliability-workflow-animated.svg" alt="Animated reliability-first workflow from public evidence through geographic holdout, uncertainty auditing and decision analysis" width="100%" />
 </p>
 
-<p align="center"><sub>Public data → harmonized country cohort → geographic holdout → prediction & uncertainty → reliability audit → decision audit</sub></p>
+<p align="center">
+  <sub>Animated path highlighting is decorative; the scientific workflow is unchanged. <a href="figures/Fig1_Workflow_V2.svg">Open the static publication workflow SVG</a>.</sub>
+</p>
 
 The computational design is frozen in [`docs/METHOD_PROTOCOL.md`](docs/METHOD_PROTOCOL.md), while [`config/frozen_config.json`](config/frozen_config.json) records the public analysis configuration.
 
