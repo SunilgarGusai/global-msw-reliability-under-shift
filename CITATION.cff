@@ -22,3 +22,14 @@ preferred-citation:
     - family-names: Jadeja
       given-names: Manoharsinh R.
   year: 2026
+abstract: "Public reproducibility materials for reliability-first municipal solid-waste service prediction under geographic distribution shift, including leave-one-region-out transfer evaluation, subgroup auditing, uncertainty analysis, and decision-prioritisation diagnostics."
+keywords:
+  - municipal solid waste
+  - geographic shift
+  - distribution shift
+  - uncertainty quantification
+  - conformal prediction
+  - subgroup reliability
+  - sustainability
+  - machine learning
+  - reproducible research
