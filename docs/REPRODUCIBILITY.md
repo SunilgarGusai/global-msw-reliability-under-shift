@@ -34,4 +34,4 @@ Do not overwrite committed frozen result files during exploratory reruns. V2 rep
 
 ## Manuscript boundary
 
-The public reproducibility repository is not a mirror of the journal-submission package. Cover letters, portal-specific forms, reviewer correspondence, and other administrative submission files are kept outside the repository so that the computational artifact remains focused and auditable.
+The public reproducibility repository is not a mirror of the private manuscript package. Cover letters, portal-specific forms, and other administrative manuscript files are kept outside the repository so that the computational artifact remains focused and auditable.
