@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/SunilgarGusai/global-msw-reliability-under-shift/actions/workflows/repository-validation.yml"><img src="https://github.com/SunilgarGusai/global-msw-reliability-under-shift/actions/workflows/repository-validation.yml/badge.svg" alt="Repository verification"/></a>
-  <a href="https://github.com/SunilgarGusai/global-msw-reliability-under-shift/releases/tag/v1.0.0-submission"><img src="https://img.shields.io/badge/release-v1.0.0--submission-6f42c1.svg" alt="Frozen submission release"/></a>
+  <a href="https://github.com/SunilgarGusai/global-msw-reliability-under-shift/releases/tag/v1.0.0-submission"><img src="https://img.shields.io/badge/release-v1.0.0--frozen-6f42c1.svg" alt="Frozen reproducibility release"/></a>
   <img src="https://img.shields.io/badge/reproducibility-frozen%20%2B%20CI-0f766e.svg" alt="Frozen reproducibility with CI"/>
   <a href="environment.yml"><img src="https://img.shields.io/badge/Python-3.13-3776AB.svg?logo=python&logoColor=white" alt="Python 3.13"/></a>
   <a href="CITATION.cff"><img src="https://img.shields.io/badge/citation-CITATION.cff-blue.svg" alt="Citation metadata"/></a>
@@ -83,7 +83,7 @@ python pipeline/scripts/11_oof_decision_audit.py \
   --figures figures/reproduced
 ```
 
-For fresh source acquisition and a complete rerun, use the phase-separated launchers in [`pipeline/cmd/`](pipeline/cmd/). Because upstream public datasets can be revised, fresh retrieval is scientifically useful but is not expected to be byte-identical to the frozen submission state.
+For fresh source acquisition and a complete rerun, use the phase-separated launchers in [`pipeline/cmd/`](pipeline/cmd/). Because upstream public datasets can be revised, fresh retrieval is scientifically useful but is not expected to be byte-identical to the frozen reproducibility state.
 
 See [`QUICKSTART.md`](QUICKSTART.md) and [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
 
@@ -150,11 +150,11 @@ Use [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md) and [`DATA_SOURCES.md`]
 
 ## Repository scope
 
-This is a **scientific reproducibility repository**, not a mirror of the journal-submission package.
+This is a **scientific reproducibility repository**, not a mirror of the private manuscript package.
 
-**No manuscript source or manuscript PDF is stored here.** The repository does not contain the journal manuscript, blinded/unblinded manuscript files, cover letter, title page, submission forms, reviewer correspondence, or other portal-specific submission material.
+**No manuscript source or manuscript PDF is stored here.** The repository does not contain the manuscript, blinded/unblinded manuscript files, cover letter, title page, or other portal-specific manuscript material.
 
-The only PDFs in the repository are **scientific figure files** corresponding to the figures under [`figures/`](figures/). The versioned release asset contains the same reproducibility package and likewise excludes the manuscript and journal-administrative files.
+The only PDFs in the repository are **scientific figure files** corresponding to the figures under [`figures/`](figures/). The versioned release asset contains the same reproducibility package and likewise excludes manuscript and journal-administrative files.
 
 ## Scientific boundaries
 
@@ -170,7 +170,7 @@ Original project code and documentation are released under the [`MIT License`](L
 
 ## Frozen release
 
-The submission-state reproducibility archive is preserved as:
+The frozen reproducibility archive is preserved as:
 
 **[`v1.0.0-submission`](https://github.com/SunilgarGusai/global-msw-reliability-under-shift/releases/tag/v1.0.0-submission)**
 
