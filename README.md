@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/repository-banner.svg" alt="Global MSW Reliability Under Geographic Shift" width="100%" />
+  <img src="docs/assets/repository-banner.gif" alt="Global MSW Reliability Under Geographic Shift" width="100%" />
 </p>
 
 <h1 align="center">Global MSW Reliability Under Geographic Shift</h1>
