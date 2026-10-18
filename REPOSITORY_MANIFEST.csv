@@ -31,3 +31,5 @@ provenance/checksums_phaseB2.sha256,Historical local Phase-B2 SHA-256 record,pro
 scripts/validate_public_artifact.py,Repository structure/numerical/integrity validator,code,current
 tests/test_frozen_invariants.py,Automated frozen numerical tests,test,current
 .github/workflows/repository-validation.yml,GitHub Actions continuous verification,automation,current
+.github/workflows/render-repository-banner.yml,Reproducible export of animated repository artwork,ci,current
+docs/assets/repository-banner.gif,Animated visual cover generated from SVG master,docs,current
