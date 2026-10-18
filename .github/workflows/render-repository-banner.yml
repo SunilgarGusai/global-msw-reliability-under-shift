@@ -1,5 +1,5 @@
 name: Render animated research banner
-# Decorative banner export does not change frozen numerical research outputs.
+# Decorative visual export preserves the frozen numerical research outputs and checksums.
 on:
   push:
     branches: [main, animated-banner-v5]
