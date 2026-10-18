@@ -28,9 +28,26 @@ jobs:
             --input docs/assets/repository-banner.svg \
             --output docs/assets/repository-banner.gif \
             --repo "${{ github.event.repository.name }}"
+      - name: Refresh documentation hashes in public SHA manifest
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          path=Path('PUBLIC_SHA256SUMS.txt')
+          replacements={'README.md','REPOSITORY_MANIFEST.csv'}
+          output=[]
+          for line in path.read_text(encoding='utf-8').splitlines():
+              if not line.strip():
+                  continue
+              digest, rel=line.split('  ',1)
+              if rel in replacements:
+                  digest=hashlib.sha256(Path(rel).read_bytes()).hexdigest()
+              output.append(f'{digest}  {rel}')
+          path.write_text('\\n'.join(output)+'\\n',encoding='utf-8')
+          PY
       - name: Commit generated GIF
         run: |
-          git add docs/assets/repository-banner.gif
+          git add docs/assets/repository-banner.gif PUBLIC_SHA256SUMS.txt
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
